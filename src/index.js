@@ -63,12 +63,23 @@ if (!user_id) {
     }
 
     /**
+    * @param {Number} userId
+    */
+    async getBalance(userId) {
+        if (!userId) throw new ReferenceError('Параметр "userId" обязателен.')
+        return this.call('users.getBalance', { userId })
+    }
+
+    /**
      * @param {string} name - Новое имя проекта
      * @param {string} avatar - Прямая ссылка на новый аватар проекта
      * @param {Number} group_id - Цифровой ID нового сообщества проекта
      * @description Редактирует данные Вашего проекта
      */
     editProjectInfo(name, avatar, group_id) {
+	    if (!name) throw new ReferenceError('Параметр "name" обязателен.')
+	    if (!avatar) throw new ReferenceError('Параметр "avatar" обязателен.')
+	    if (!group_id) throw new ReferenceError('Параметр "group_id" обязателен.')
         return this.call('project.edit', { name, avatar, group_id })
     }
 
