@@ -17,6 +17,24 @@ const hapi = new HydraApi('Token', 'user_id')
 
 ## Методы API
 
+***getBalance*** - Получить баланс пользователей
+
+| Параметр | Тип | Обязателен | Описание |
+|--|--|--|--|
+| userIds | Array<Number>/Number | да |  ID пользователя, чей баланс нужно вернуть |
+
+**Пример:**
+
+``` js
+async function run() {
+    const info = await hapi.getBalance(1);
+    console.log(info);
+};
+
+run().catch(console.error);
+```
+
+
 ***getProjectInfo*** - Получить информацию о Вашем проекте
 
 **Пример:**
@@ -34,9 +52,9 @@ run().catch(console.error);
 
 | Параметр | Тип | Обязателен | Описание |
 |--|--|--|--|
-| name | string | Нет | Название проекта |
-| avatar| string | Нет | Прямая ссылка на новый аватар проекта |
-| group_id| number | Нет | ID группы проекта |
+| name | string | Да | Название проекта |
+| avatar| string | Да | Прямая ссылка на новый аватар проекта |
+| group_id| number | Да | ID группы проекта |
 
 * Все параметры должны быть переданы 
 
