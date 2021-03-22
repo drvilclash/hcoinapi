@@ -1,0 +1,25 @@
+{
+  "name": "hcoinapi",
+  "version": "1.0.1",
+  "description": "Hydra Api - Апи приложения hydra coin vk.com/app7772933",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ub1x/domosed.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hydraapi"
+  ],
+  "homepage": "https://github.com/ub1x/domosed",
+  "author": "Kytyukov Egor",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.4.1",
+    "node-fetch": "^2.6.1",
+    "md5": "^2.3.0"
+
+  }
+}
