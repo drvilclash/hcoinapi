@@ -100,6 +100,25 @@ if (!user_id) {
     async getPaymentLink(count = 1) {
         return 'https://vk.com/app7772933#id=pay_project&project_id='+this.user_id+'&count='+count+''
     }
+
+
+    /**
+     * @param {Number} coins - Входящее значение коинов
+     * @description
+     * Делает получаемое из API значение коинов читабельным
+     * Например, приходит значение 1234567890. Этот метод сделает значение таким: 1 234 567,890
+     * @returns {String} - Отформатированная строка
+     */
+    formatCoins(coins) {
+        if (typeof coins !== 'number') {
+            throw new TypeError('Аргумент `coins` должен быть числом');
+        }
+        
+        return (coins) 
+           .toLocaleString() 
+           .replace(/,/g, ' ') 
+           .replace(/\./g, ',');
+    }
 	
     /**
      * @param {string | Number} path Ваш IP адрес или домен
