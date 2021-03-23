@@ -2,6 +2,8 @@
 
 NodeJS библиотека для работы с API сервиса "Hydra Coin"
 
+[![NPM](https://nodei.co/npm/hcoinapi.png)](https://nodei.co/npm/hcoinapi/)
+
 # Установка
 **npm**
  `npm i hcoinapi`
@@ -12,10 +14,28 @@ NodeJS библиотека для работы с API сервиса "Hydra Coi
 const {
     HydraApi
 } = require('hcoinapi')
-const hapi = new HydraApi('Token', 'user_id')
+const hapi = new HydraApi('Token', user_id)
 ```
 
 ## Методы API
+
+***getBalance*** - Получить баланс пользователей
+
+| Параметр | Тип | Обязателен | Описание |
+|--|--|--|--|
+| coins | Number | да |  ID пользователя, чей баланс нужно вернуть |
+
+**Пример:**
+
+``` js
+async function run() {
+    const trans = await hapi.formatCoins(1000000.100);
+
+    console.log(trans); // (1 000 000,1)
+}
+
+run().catch(console.error);
+```
 
 ***getBalance*** - Получить баланс пользователей
 
