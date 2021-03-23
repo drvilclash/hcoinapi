@@ -31,7 +31,7 @@ const hapi = new HydraApi('Token', user_id)
 async function run() {
     const result = await hapi.getTransactionList(0);
 
-    console.log(result);
+    console.log(result); // {pay: true, sum: 12, date: unix, name: 'HYDRA WHEEL', photo: 'vk.com', iduser: 548313221} (Параметр pay означает отправили вы или вам: true - Вы, false - Вам)
 }
 
 run().catch(console.error);
