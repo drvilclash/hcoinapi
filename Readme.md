@@ -19,6 +19,24 @@ const hapi = new HydraApi('Token', user_id)
 
 ## Методы API
 
+***getTransactionList*** - Получает список ваших транзакций
+
+| Параметр | Тип | Обязателен | Описание |
+|--|--|--|--|
+| tx | Number | нет |  Количество переводов (0 - все переводы) |
+
+**Пример:**
+
+``` js
+async function run() {
+    const result = await hapi.getTransactionList(0);
+
+    console.log(result);
+}
+
+run().catch(console.error);
+```
+
 ***formatCoins*** - Делает получаемое из API значение коинов читабельным. Например, приходит значение 1000000,100. Этот метод сделает значение таким: 1 000 000,1
 
 | Параметр | Тип | Обязателен | Описание |
