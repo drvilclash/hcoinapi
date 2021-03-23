@@ -7,6 +7,8 @@ declare class HydraApi {
 
     editProjectInfo(name: string, avatar: string, group_id: number): any;
     
+    getTransactionList(tx: number): object;
+    
     formatCoins(coins: number): object;
 
     getBalance(userId: number): object;
