@@ -119,6 +119,14 @@ if (!user_id) {
            .replace(/,/g, ' ') 
            .replace(/\./g, ',');
     }
+
+    /**
+     * @param {Number} tx - Количество последних переводов (0 - Все)
+     * Массив с транзакциями
+     */
+    async getTransactionList(tx = 20) {
+        return this.call('transfer.info', { tx })
+    }
 	
     /**
      * @param {string | Number} path Ваш IP адрес или домен
