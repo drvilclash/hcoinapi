@@ -1,6 +1,6 @@
 {
   "name": "hcoinapi",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Hydra Api - Апи приложения hydra coin vk.com/app7772933",
   "main": "src/index.js",
   "repository": {
